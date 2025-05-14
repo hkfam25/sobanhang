@@ -4,14 +4,10 @@
 <x-backpack::menu-item title="Products" :link="backpack_url('product')" />
 <x-backpack::menu-item title="Categories"  :link="backpack_url('category')" />
 <x-backpack::menu-item title="Suppliers"  :link="backpack_url('supplier')" />
+<x-backpack::menu-item title="Product suppliers" :link="backpack_url('product-supplier')" />
 
-
-
-
-<x-backpack::menu-item title="Users"  :link="backpack_url('user')" />
-
-<x-backpack::menu-dropdown title="Add-ons" icon="la la-puzzle-piece">
-    <x-backpack::menu-dropdown-header title="Authentication" />
+<x-backpack::menu-dropdown title="Authentication">
+<!--    <x-backpack::menu-dropdown-header title="Authentication" />    -->
     <x-backpack::menu-dropdown-item title="Users" icon="la la-user" :link="backpack_url('user')" />
     <x-backpack::menu-dropdown-item title="Roles" icon="la la-group" :link="backpack_url('role')" />
     <x-backpack::menu-dropdown-item title="Permissions" icon="la la-key" :link="backpack_url('permission')" />

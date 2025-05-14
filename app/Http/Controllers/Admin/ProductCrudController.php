@@ -45,6 +45,26 @@ class ProductCrudController extends CrudController
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
          */
+
+        $this->crud->setColumns([
+        'name',
+        [
+            'label' => 'Category', // Column heading
+            'type' => 'select',
+            'name' => 'category_id', // the column that contains the ID of the related entity
+            'entity' => 'category', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model' => \App\Models\Category::class, // optional
+        ],
+        'purchase_price',
+        'selling_price',
+        'quantity',
+        'description',
+
+
+
+
+    ]);
     }
 
     /**
@@ -62,6 +82,20 @@ class ProductCrudController extends CrudController
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');
          */
+
+        CRUD::field([
+        'type'      => 'select',
+        'name'      => 'category_id',
+        'model'     => \App\Models\Category::class,
+        'attribute' => 'name',
+        ])->validationRules('nullable|exists:categories,id');
+
+        CRUD::field('name')->validationRules('required|min:1');
+        CRUD::field('sku')->validationRules('unique:products,sku|nullable');
+        CRUD::field('barcode')->validationRules('unique:products,barcode|nullable');
+
+
+        CRUD::field('selling_price')->validationRules('required|min:2');
     }
 
     /**

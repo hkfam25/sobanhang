@@ -6,7 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Supplier extends Model
+class ProductSupplier extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -17,11 +17,22 @@ class Supplier extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'suppliers';
+    protected $table = 'product_suppliers';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
 
+
+
+    protected $fillable = [
+        'product_id',
+        'supplier_id',  
+        'cost_price',
+        'supplier_product_code',
+    ];
+
+
+    
     // protected $fillable = [];
     // protected $hidden = [];
 
@@ -30,10 +41,14 @@ class Supplier extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-
-    public function productSuppliers()
+    public function product()
     {
-        return $this->hasMany(ProductSupplier::class);
+        return $this->belongsTo(Product::class,'product_id');
+    }
+
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class,'supplier_id');
     }
 
     /*

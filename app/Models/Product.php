@@ -21,7 +21,10 @@ class Product extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
+
+    
+
+
     // protected $hidden = [];
 
     /*
@@ -57,5 +60,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+        public function productSuppliers()
+    {
+        return $this->hasMany(ProductSupplier::class);
     }
 }
