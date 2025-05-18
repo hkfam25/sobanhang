@@ -440,7 +440,7 @@ return [
         // "uz_Latn" => "Uzbek (Latin)",
         // "uz_Latn_UZ" => "Uzbek (Latin, Uzbekistan)",
         // "uz" => "Uzbek",
-        // "vi_VN" => "Vietnamese (Vietnam)",
+        "vi_VN" => "Vietnamese (Vietnam)",
         // "vi" => "Vietnamese",
         // "vun_TZ" => "Vunjo (Tanzania)",
         // "vun" => "Vunjo",

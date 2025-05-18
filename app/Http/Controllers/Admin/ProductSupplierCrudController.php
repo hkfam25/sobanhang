@@ -45,7 +45,7 @@ class ProductSupplierCrudController extends CrudController
     // Override the columns for product_id and supplier_id to display names
     $this->crud->setColumns([
         [
-            'label' => 'Product', // Column heading
+            'label' => 'Mặt hàng', // Column heading
             'type' => 'select',
             'name' => 'product_id', // the column that contains the ID of the related entity
             'entity' => 'product', // the method that defines the relationship in your Model
@@ -53,7 +53,7 @@ class ProductSupplierCrudController extends CrudController
             'model' => \App\Models\Product::class, // optional
         ],
         [
-            'label' => 'Supplier',
+            'label' => 'Nhà cung cấp',
             'type' => 'select',
             'name' => 'supplier_id',
             'entity' => 'supplier',
@@ -95,7 +95,7 @@ class ProductSupplierCrudController extends CrudController
         'model'     => \App\Models\Supplier::class,
         'attribute' => 'name',
         ]);
-        CRUD::field('supplier_product_code')->type('text')->size(12);
+        CRUD::field('supplier_product_code')->type('text')->size(12)->allowNull(true);
         CRUD::field('cost_price')->type('number')->size(15,2);
 
         

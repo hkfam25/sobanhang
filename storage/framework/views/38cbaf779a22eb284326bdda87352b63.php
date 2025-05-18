@@ -1,9 +1,9 @@
 
-<li class="nav-item"><a class="nav-link" href="<?php echo e(backpack_url('dashboard')); ?>"><i class="la la-home nav-icon"></i> <?php echo e(trans('backpack::base.dashboard')); ?></a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo e(backpack_url('dashboard')); ?>"> <?php echo e(trans('backpack::base.dashboard')); ?></a></li>
 
 <?php if (isset($component)) { $__componentOriginalead85e76a923e64d9eae23947232cf9a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalead85e76a923e64d9eae23947232cf9a = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Products','link' => backpack_url('product')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Mặt hàng','link' => backpack_url('product')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -23,7 +23,7 @@
 <?php endif; ?>
 <?php if (isset($component)) { $__componentOriginalead85e76a923e64d9eae23947232cf9a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalead85e76a923e64d9eae23947232cf9a = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Categories','link' => backpack_url('category')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Phân loại','link' => backpack_url('category')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -43,7 +43,7 @@
 <?php endif; ?>
 <?php if (isset($component)) { $__componentOriginalead85e76a923e64d9eae23947232cf9a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalead85e76a923e64d9eae23947232cf9a = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Suppliers','link' => backpack_url('supplier')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Nhà cung cấp','link' => backpack_url('supplier')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -63,7 +63,7 @@
 <?php endif; ?>
 <?php if (isset($component)) { $__componentOriginalead85e76a923e64d9eae23947232cf9a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalead85e76a923e64d9eae23947232cf9a = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Product suppliers','link' => backpack_url('product-supplier')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuItem::resolve(['title' => 'Sản phẩm của nhà cung cấp','link' => backpack_url('product-supplier')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -84,7 +84,7 @@
 
 <?php if (isset($component)) { $__componentOriginal3304fc1ec27516a666a2f68d6da76d86 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal3304fc1ec27516a666a2f68d6da76d86 = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuDropdown::resolve(['title' => 'Authentication'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuDropdown::resolve(['title' => 'Phân quyền'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-dropdown'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -114,7 +114,7 @@
 <?php endif; ?>    -->
     <?php if (isset($component)) { $__componentOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Users','icon' => 'la la-user','link' => backpack_url('user')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Người dùng','icon' => 'la la-user','link' => backpack_url('user')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-dropdown-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -134,7 +134,7 @@
 <?php endif; ?>
     <?php if (isset($component)) { $__componentOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Roles','icon' => 'la la-group','link' => backpack_url('role')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Vai trò','icon' => 'la la-group','link' => backpack_url('role')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-dropdown-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -154,7 +154,7 @@
 <?php endif; ?>
     <?php if (isset($component)) { $__componentOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal4a7c4d33fcbfdc491dc37cabf6bac1f0 = $attributes; } ?>
-<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Permissions','icon' => 'la la-key','link' => backpack_url('permission')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Backpack\CRUD\app\View\Components\MenuDropdownItem::resolve(['title' => 'Quyền truy cập','icon' => 'la la-key','link' => backpack_url('permission')] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('backpack::menu-dropdown-item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>

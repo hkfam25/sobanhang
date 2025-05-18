@@ -47,9 +47,22 @@ class ProductCrudController extends CrudController
          */
 
         $this->crud->setColumns([
-        'name',
+        ['name'=> 'name', // The db column name
+            'label' => 'Tên hàng', // Column heading
+            'type' => 'text', // The field type
+        ],
         [
-            'label' => 'Category', // Column heading
+            'name' => 'sku',
+            'label' => 'Mã hàng',
+            'type' => 'text',
+        ],
+        [
+            'name' => 'barcode',
+            'label' => 'Mã vạch',
+            'type' => 'text',
+        ],
+        [
+            'label' => 'Loại hàng', // Column heading
             'type' => 'select',
             'name' => 'category_id', // the column that contains the ID of the related entity
             'entity' => 'category', // the method that defines the relationship in your Model
