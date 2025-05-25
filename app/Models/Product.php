@@ -22,6 +22,20 @@ class Product extends Model
     // public $timestamps = false;
     protected $guarded = ['id'];
 
+        protected $fillable = [
+        'name',
+        'sku',
+        'barcode',
+        'category_id',
+        'unit',
+        'purchase_price',
+        'selling_price',
+        'stock_quantity',
+        'min_stock_level',
+        'image_url',
+        'description',
+    ];
+
     
 
 
