@@ -1,0 +1,404 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #222;
+}
+
+/* Home Header */
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+}
+
+.home-logo img {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.home-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.home-nav a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.home-actions a {
+    margin-left: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 18px 25px;
+}
+
+.home-btn-login {
+    color: #00b14f;
+}
+
+.home-btn-register {
+    background-color: #00b14f;
+    color: white;
+    border-radius: 8px;
+}
+
+.home-btn-register:hover {
+    opacity: 0.8;
+}
+
+/* Home Hero */
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: #fff;
+}
+
+.home-hero-text {
+    max-width: 550px;
+}
+
+.home-hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #00b14f;
+    margin-bottom: 20px;
+}
+
+.home-hero-subtitle {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.home-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.home-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.home-list i {
+    color: #00b14f;
+    margin-right: 10px;
+}
+
+.home-cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.home-btn-green {
+    background-color: #00b14f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.home-store-buttons img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.home-hero-image img {
+    max-width: 600px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-hero-image {
+        margin-top: 40px;
+    }
+
+    .home-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-actions {
+        margin-top: 10px;
+    }
+}
+
+/* Home Feature */
+.home-feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #f9fff9;
+    flex-wrap: wrap;
+}
+
+.home-feature-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.home-feature-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.home-feature-right {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 40px;
+}
+
+.home-feature-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00b14f;
+    text-transform: uppercase;
+}
+
+.home-feature-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.home-feature-title .highlight {
+    color: #00b14f;
+}
+
+.home-feature-item {
+    margin-bottom: 20px;
+}
+
+.home-feature-item h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.home-feature-item p {
+    font-size: 15px;
+    margin: 0;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .home-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-feature-right {
+        padding-left: 0;
+    }
+
+    .home-feature-left {
+        margin-bottom: 40px;
+    }
+}
+
+/* Home Debt */
+
+.home-debt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.home-debt-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-debt-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.home-debt-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+@media (max-width: 900px) {
+    .home-debt {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-debt-left {
+        padding-top: 40px;
+    }
+}
+
+/* More Feature */
+.home-more-features {
+    background: #f8fff7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.home-more-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.home-more-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+.home-footer {
+    background: #f3f7f3;
+    font-family: Arial, sans-serif;
+    padding: 40px 60px;
+    color: #333;
+}
+
+.home-footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.home-company-info {
+    flex: 1 1 250px;
+    max-width: 670px;
+}
+
+.home-company-info img.home-logo {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.home-social-media {
+    /* text-align: right; */
+}
+
+.home-social-icons img {
+    width: 24px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.home-social-icons img:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.home-footer-columns {
+    display: flex;
+    flex: 3 1 600px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.home-footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.home-footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home-footer-col ul li {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.home-footer-col ul li:hover {
+    cursor: pointer;
+    color: #00b14f;
+}
+
+.home-footer-bottom {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-gov-badges img {
+    height: 30px;
+    margin-left: 10px;
+}
+
+.home-back-to-top a {
+    text-decoration: none;
+    font-size: 20px;
+    color: green;
+}
