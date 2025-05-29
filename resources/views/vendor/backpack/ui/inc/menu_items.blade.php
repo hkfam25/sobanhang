@@ -22,4 +22,4 @@
 </x-backpack::menu-dropdown>
 
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('pos') }}"><i class="nav-icon la la-cash-register"></i> POS</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('index') }}"><i class="nav-icon la la-cash-register"></i> POS</a></li>

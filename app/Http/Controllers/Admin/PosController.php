@@ -14,7 +14,7 @@ class PosController
 {
     public function index()
     {
-        return view('vendor.backpack.ui.inc.pos.index');
+        return view('index');
     }
 
     public function searchProducts(Request $request)

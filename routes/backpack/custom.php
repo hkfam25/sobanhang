@@ -28,9 +28,9 @@ Route::group([
     Route::crud('user', 'UserCrudController');
     Route::crud('product-supplier', 'ProductSupplierCrudController');
 
-    Route::get('/pos', [PosController::class, 'index'])->name('index'); // Màn hình POS chính
-    Route::get('/search-products', [PosController::class, 'searchProducts'])->name('searchProducts'); // Route để tìm kiếm sản phẩm (AJAX)
-    Route::post('/submit-sale', [PosController::class, 'submitSale'])->name('submitSale'); 
+    Route::get('index', 'PosController@index')->name('index'); // Màn hình POS chính
+    Route::get('search-products','PosController@searchProducts')->name('searchProducts'); // Route để tìm kiếm sản phẩm (AJAX)
+    Route::post('submit-sale', 'PosController@submitSale')->name('submitSale'); 
 
 
 

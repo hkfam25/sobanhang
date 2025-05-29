@@ -228,5 +228,5 @@
 <?php endif; ?>
 
 
-<li class="nav-item"><a class="nav-link" href="<?php echo e(backpack_url('pos')); ?>"><i class="nav-icon la la-cash-register"></i> POS</a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo e(backpack_url('index')); ?>"><i class="nav-icon la la-cash-register"></i> POS</a></li>
 <?php /**PATH C:\xampp\htdocs\quanlycuahang\resources\views/vendor/backpack/ui/inc/menu_items.blade.php ENDPATH**/ ?>
