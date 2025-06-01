@@ -65,11 +65,6 @@ class ProductSupplierCrudController extends CrudController
         'cost_price',
     ]);
 
-
-
-
-
-
     }
 
     /**

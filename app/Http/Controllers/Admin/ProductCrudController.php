@@ -103,12 +103,79 @@ class ProductCrudController extends CrudController
         'attribute' => 'name',
         ])->validationRules('nullable|exists:categories,id');
 
-        CRUD::field('name')->validationRules('required|min:1');
-        CRUD::field('sku')->validationRules('unique:products,sku|nullable');
-        CRUD::field('barcode')->validationRules('unique:products,barcode|nullable');
+        CRUD::field([
+            'label' => 'Tên sản phẩm',
+            'type'      => 'text',
+            'name'      => 'name',
+            'attribute' => 'name',
+        ])->validationRules('required|min:1');
 
+        CRUD::field([
+            'type'      => 'text',
+            'name'      => 'sku',
+            'attribute' => 'name',
+        ])->validationRules('unique:products,sku|nullable');
+
+        CRUD::field([
+            'type'      => 'text',
+            'name'      => 'barcode',
+            'attribute' => 'name',
+        ])->validationRules('unique:products,barcode|nullable');
+        
+
+
+        CRUD::field([
+        'label' => 'Phân loại hàng',
+        'type'      => 'select',
+        'name'      => 'category_id',
+        'model'     => \App\Models\Category::class,
+        'attribute' => 'name',
+        ])->validationRules('required|exists:categories,id');
+
+
+
+
+        CRUD::field([
+        'label' => 'đơn vị tính',
+        'type'      => 'text',
+        'name'      => 'unit',
+        // 'model'     => \App\Models\Products::class,
+        'attribute' => 'name',
+        ])->validationRules('nullable');
 
         CRUD::field('selling_price')->validationRules('required|min:2');
+
+        // Stock Quantity (Số lượng tồn kho)
+        CRUD::field([
+        'label' => 'Hàng tồn kho',
+        'type'      => 'number',
+        'name'      => 'stock_quantity',
+        'model'     => \App\Models\Products::class,
+        'attribute' => 'name',
+        ])->validationRules('required|min:1');
+                
+        CRUD::field([
+        'label' => 'Giá bán',
+        'type'      => 'number',
+        'name'      => 'selling_price',
+        'attribute' => 'name',
+        ])->validationRules('required|min:2');
+
+        CRUD::field([
+        'label' => 'Giá mua',
+        'type'      => 'number',
+        'name'      => 'purchase_price',
+        'attribute' => 'name',
+        'default'=>0,
+        ]);
+
+        CRUD::field([
+        'label' => 'Mức tồn kho tối thiểu',
+        'type'      => 'number',
+        'name'      => 'min_stock_level',
+        'default'=>0,
+        'attribute' => 'name',
+        ])->validationRules('nullable');
     }
 
     /**

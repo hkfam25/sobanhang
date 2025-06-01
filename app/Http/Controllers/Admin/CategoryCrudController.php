@@ -58,12 +58,23 @@ class CategoryCrudController extends CrudController
         CRUD::setValidation(CategoryRequest::class);
         CRUD::setFromDb(); // set fields from db columns.
 
-        CRUD::field('name')->validationRules('required|min:1');
-
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
+        // Category (Loại sản phẩm)
+        CRUD::field([
+        'label' => 'Loại sản phẩm',
+        'type'      => 'text',
+        'name'      => 'name',
+        // 'model'     => \App\Models\Products::class,
+        'attribute' => 'name',
+        ])->validationRules('required|min:1');
+        
+        // Description
+        CRUD::field([
+        'label' => 'Mô tả sản phẩm',
+        'type'      => 'text',
+        'name'      => 'description',
+        // 'model'     => \App\Models\Products::class,
+        'attribute' => 'name',
+        ])->validationRules('required|min:1');
     }
 
     /**

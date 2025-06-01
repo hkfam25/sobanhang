@@ -63,7 +63,37 @@ class SupplierCrudController extends CrudController
          * - CRUD::field('price')->type('number');
          */
 
-        CRUD::field('name')->validationRules('required|min:1');
+        CRUD::field([
+            'label' => 'Tên nhà cung cấp',
+            'type'      => 'text',
+            'name'      => 'name',
+            'attribute' => 'name',
+        ])->validationRules('required|min:1');
+
+        CRUD::field([
+            'label' => 'Địa chỉ',
+            'type'      => 'text',
+            'name'      => 'address',
+            'attribute' => 'address',
+        ])->validationRules('nullable');
+        CRUD::field([
+            'label' => 'Số điện thoại',
+            'type'      => 'text',
+            'name'      => 'phone',
+            'attribute' => 'phone',
+        ])->validationRules('nullable');
+        CRUD::field([
+            'label' => 'Người liên hệ',
+            'type'      => 'text',
+            'name'      => 'contact_person',
+            'attribute' => 'contact_person',
+        ])->validationRules('nullable|email');
+        CRUD::field([
+            'label' => 'Email',
+            'type'      => 'email',
+            'name'      => 'email',
+            'attribute' => 'email',
+        ])->validationRules('nullable|email');
     }
 
     /**
