@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-class PosController
+class PosController 
 {
     public function index()
     {
@@ -76,7 +76,7 @@ class PosController
         try {
             // 1. Tạo bản ghi mới cho Hóa đơn (Sale)
             $sale = Sale::create([
-                //'user_id' => Auth::id(), // ID của nhân viên đang thực hiện giao dịch
+                'user_id' => Auth::id(), // ID của nhân viên đang thực hiện giao dịch
                 'total_amount' => $grandTotal,
                 'payment_method' => $paymentMethod,
                 // Thêm các trường khác như customer_id, notes nếu có
@@ -91,7 +91,6 @@ class PosController
                     'product_id' => $product->id,
                     'quantity' => $itemData['quantity'],
                     'price_at_sale' => $itemData['price'], // Giá bán tại thời điểm giao dịch (có thể đã được nhân viên sửa)
-                    'cost_at_sale' => $product->purchase_price, // Giá nhập của sản phẩm (để tính lợi nhuận)
                 ]);
 
                 // Giảm số lượng tồn kho của sản phẩm

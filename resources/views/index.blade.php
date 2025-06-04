@@ -83,7 +83,12 @@
 
 
 @push('after_scripts') {{-- Đẩy JavaScript vào stack 'scripts' trong layout của bạn --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script>
+
 $(document).ready(function() {
     let cart = []; // Mảng lưu trữ các sản phẩm trong giỏ hàng (client-side)
 
@@ -326,8 +331,12 @@ $(document).ready(function() {
                         timer: 2000,
                         showConfirmButton: false
                     });
-                    $('#clearCartButton').click(); // Xóa giỏ hàng sau khi thanh toán thành công
-                    // (Tùy chọn) In hóa đơn: window.open('/pos/receipt/' + response.sale_id, '_blank');
+                    //$('#clearCartButton').click(); // Xóa giỏ hàng sau khi thanh toán thành công
+                    cart = []; // Xóa giỏ hàng sau khi thanh toán thành côngcart = [];
+                    renderCart();
+                    $('#productSearchInput').val('').focus();
+                    $('#searchResults').empty();
+                        // (Tùy chọn) In hóa đơn: window.open('/pos/receipt/' + response.sale_id, '_blank');
                 } else {
                     // alert('Lỗi: ' + response.message);
                      Swal.fire({
