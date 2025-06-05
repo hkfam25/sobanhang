@@ -69,7 +69,7 @@ return [
          * When false, the theme will only use the "defaultColorMode" set above.
          * In case "defaultColorMode" is null, system is the default.
          */
-        'showColorModeSwitcher' => true,
+        'showColorModeSwitcher' => false,
 
         /**
          * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".
@@ -128,7 +128,8 @@ return [
          * You can also add a background class like bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success,
          * bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
          */
-        'sidebar' => null,
+        'sidebar' => true,
+        
 
         /**
          * Used in the top container menu when the layout is of horizontal type.

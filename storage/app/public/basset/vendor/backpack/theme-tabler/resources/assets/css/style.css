@@ -3,7 +3,9 @@
     regardless of skin color applied and dark/light mode used.
 */
 
-
+html:not([data-theme]) .show-theme-system { display: initial!important; }
+html[data-theme=light] .show-theme-light { display: initial!important; }
+html[data-theme=dark] .show-theme-dark { display: initial!important; }
 
 .sidebar-toggler {
     background-color: transparent;
@@ -70,7 +72,7 @@ table tbody tr td.dtr-control span {
 
 .table thead th,
 .table tfoot th {
-    background-color: #a9a9a957!important;
+    background-color: transparent!important;
 }
 
 /* Remove once https://github.com/tabler/tabler/pull/1645 is merged */
@@ -113,7 +115,7 @@ table .btn-link:hover {
     background-color: transparent;
     color: rgba(var(--tblr-primary-rgb), .8);
 }
-table .btn-link:active btn-link:active {
+table .btn-link:active {
     background-color: transparent!important;
     border-color: transparent!important;
     text-decoration: underline;
@@ -194,7 +196,7 @@ table .btn-link:active btn-link:active {
 
 
 [data-menu-theme=dark].navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item.active {
-    color: var(--tblr-navbar-active-color)!important;
+    color: var(--tblr-navbar-active-color);
 }
 
 
@@ -230,7 +232,7 @@ aside .navbar-collapse .dropdown-menu .dropdown-menu .dropdown-menu .dropdown-he
 }
 
 aside a.nav-link.active, aside a.nav-link.active:hover {
-    background-color: rgb(68, 68, 68);
+    background-color: var(--tblr-navbar-active-bg);
 }
 
 aside a.dropdown-item.active {
@@ -472,7 +474,7 @@ div.tab-container ul li.nav-item .active {
 }
 
 [data-bs-theme=light] div.tab-container ul li.nav-item .active {
-    background-color: #ffffff !important;
+    background-color: #fff !important;
     --tblr-nav-tabs-border-width: 0 !important;
 }
 
@@ -721,7 +723,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     width: 100%;
     background-color: var(--tblr-primary);
     border-radius: 50%;
-    color: #ffffff;
+    color: #FFF;
     line-height: 35px;
     font-size: 85%;
     font-weight: 300;
@@ -897,7 +899,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 
 [data-bs-theme=dark] .dt-button-collection .dropdown-menu .dropdown-item:hover {
     background-color: var(--tblr-primary) !important;
-    color: #5b5b5b;
+    color: #fff;
 }
 
 /* Fix visilibity */

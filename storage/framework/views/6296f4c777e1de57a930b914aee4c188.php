@@ -2,7 +2,7 @@
 	<?php if(!$crud->model->translationEnabled()): ?>
 
 	
-	<a href="<?php echo e(url($crud->route.'/'.$entry->getKey().'/show')); ?>" bp-button="show" class="btn btn-sm btn-link">
+	<a href="<?php echo e(url($crud->route.'/'.$entry->getKey().'/show')); ?>" bp-button="show" class="btn btn-info">
 		<i class="la la-eye"></i> <span><?php echo e(trans('backpack::crud.preview')); ?></span>
 	</a>
 

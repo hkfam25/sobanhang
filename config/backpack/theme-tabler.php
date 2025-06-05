@@ -22,7 +22,7 @@ return [
      * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
      * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
      */
-    'layout' => 'horizontal_overlap',
+    'layout' => 'vertical', // horizontal, horizontal_dark, horizontal_overlap, vertical, vertical
 
     /**
      * Pick a login page layout.
@@ -69,7 +69,7 @@ return [
          * When false, the theme will only use the "defaultColorMode" set above.
          * In case "defaultColorMode" is null, system is the default.
          */
-        'showColorModeSwitcher' => true,
+        'showColorModeSwitcher' => false,
 
         /**
          * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".
@@ -85,7 +85,7 @@ return [
         /**
          * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.
          */
-        'sidebarFixed' => false,
+        'sidebarFixed' => true,
 
         /**
          * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.

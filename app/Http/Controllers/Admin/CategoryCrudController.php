@@ -28,7 +28,7 @@ class CategoryCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Category::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/category');
-        CRUD::setEntityNameStrings('category', 'categories');
+        CRUD::setEntityNameStrings('category', 'Danh sách phân loại sản phẩm');
     }
 
     /**

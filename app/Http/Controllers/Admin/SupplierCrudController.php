@@ -28,7 +28,7 @@ class SupplierCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Supplier::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/supplier');
-        CRUD::setEntityNameStrings('supplier', 'suppliers');
+        CRUD::setEntityNameStrings('supplier', 'Danh sách nhà cung cấp');
     }
 
     /**
