@@ -5,8 +5,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    // Redirect to the admin login page, backpack's default login page
+    return redirect()->route('backpack.auth.login');
 });
+
+
+
+
+
 
 
 
