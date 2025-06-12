@@ -144,7 +144,7 @@ table .btn-link:active {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 80%;
-    color: var(--tblr-muted)!important;
+    color: green!important;
 }
 
 .navbar.navbar-filters + div {
@@ -232,7 +232,7 @@ aside .navbar-collapse .dropdown-menu .dropdown-menu .dropdown-menu .dropdown-he
 }
 
 aside a.nav-link.active, aside a.nav-link.active:hover {
-    background-color: var(--tblr-navbar-active-bg);
+    background-color: #33c254;
 }
 
 aside a.dropdown-item.active {

@@ -3,7 +3,7 @@
 
 	{{-- Single edit button --}}
 	<a href="{{ url($crud->route.'/'.$entry->getKey().'/edit') }}" bp-button="update" class="btn btn-warning">
-		<i class="la la-edit"></i> <span>{{ trans('backpack::crud.edit') }}</span>
+		<i class="la la-edit"></i> <span>{{ 'Sửa' }}</span>
 	</a>
 
 	@else

@@ -29,6 +29,11 @@ class ProductSupplierCrudController extends CrudController
         CRUD::setModel(\App\Models\ProductSupplier::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product-supplier');
         CRUD::setEntityNameStrings('product supplier', 'Danh sách mối liên hệ sản phẩm - nhà cung cấp');
+
+        if(!backpack_user()->can('Quản lý nhà cung cấp')){
+	    // deny access to operations
+            CRUD::denyAccess(['list','show','create','update','delete']);
+        }
     }
 
     /**

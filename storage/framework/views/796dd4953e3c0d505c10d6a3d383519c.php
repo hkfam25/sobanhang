@@ -1,6 +1,6 @@
 <?php if($crud->hasAccess('delete', $entry)): ?>
     <a href="javascript:void(0)" onclick="deleteEntry(this)" bp-button="delete" data-route="<?php echo e(url($crud->route.'/'.$entry->getKey())); ?>" class="btn btn-danger" data-button-type="delete">
-        <i class="la la-trash"></i> <span><?php echo e(trans('backpack::crud.delete')); ?></span>
+        <i class="la la-trash"></i> <span><?php echo e('Xóa'); ?></span>
     </a>
 <?php endif; ?>
 

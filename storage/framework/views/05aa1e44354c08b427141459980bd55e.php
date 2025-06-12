@@ -3,7 +3,7 @@
 
 	
 	<a href="<?php echo e(url($crud->route.'/'.$entry->getKey().'/edit')); ?>" bp-button="update" class="btn btn-warning">
-		<i class="la la-edit"></i> <span><?php echo e(trans('backpack::crud.edit')); ?></span>
+		<i class="la la-edit"></i> <span><?php echo e('Sửa'); ?></span>
 	</a>
 
 	<?php else: ?>

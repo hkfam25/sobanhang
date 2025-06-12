@@ -27,13 +27,21 @@ class UserCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
-        CRUD::setEntityNameStrings('user', 'users');
+        CRUD::setEntityNameStrings('user', 'Người dùng');
 
         // Restrict Access
-        if (!backpack_user()->hasPermissionTo('manage customers')) {
-            CRUD::denyAccess(['list', 'create', 'update', 'delete']);
+        if (! (backpack_user()->hasRole('Admin'))) {
+            CRUD::denyAccess(['list', 'create', 'update', 'delete', 'show']);
         }
     }
+
+    public function register(): void
+{
+    $this->app->bind(
+        \Backpack\PermissionManager\app\Http\Controllers\UserCrudController::class,
+        \App\Http\Controllers\Admin\UserCrudController::class
+    );
+}
 
     /**
      * Define what happens when the List operation is loaded.

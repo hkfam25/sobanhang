@@ -108,8 +108,13 @@ return [
         /**
          * Use this to pass classes to the <body> HTML element, on all pages.
          */
-        'body' => null,
+        'body' =>null,
 
+        /**
+         * Use this to pass classes to the navbar component.
+         * It defaults to: "navbar navbar-expand-lg navbar-dark bg-dark"
+         */
+        'navbar' => "navbar navbar-expand-lg navbar-dark bg-dark",
         /**
          * For background colors use:
          * bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue,
@@ -128,7 +133,7 @@ return [
          * You can also add a background class like bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success,
          * bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
          */
-        'sidebar' => true,
+        'sidebar' => false,
         
 
         /**

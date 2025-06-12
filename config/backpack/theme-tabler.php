@@ -80,7 +80,7 @@ return [
         /**
          * When true, the content area will take the whole screen width.
          */
-        'useFluidContainers' => false,
+        'useFluidContainers' => true,
 
         /**
          * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.
@@ -128,7 +128,7 @@ return [
          * You can also add a background class like bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success,
          * bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
          */
-        'sidebar' => null,
+        'sidebar' => "navbar navbar-vertical navbar-expand-lg navbar-light bg-light",
 
         /**
          * Used in the top container menu when the layout is of horizontal type.

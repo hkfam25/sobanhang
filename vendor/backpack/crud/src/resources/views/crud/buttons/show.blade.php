@@ -3,7 +3,7 @@
 
 	{{-- Single edit button --}}
 	<a href="{{ url($crud->route.'/'.$entry->getKey().'/show') }}" bp-button="show" class="btn btn-info">
-		<i class="la la-eye"></i> <span>{{ trans('backpack::crud.preview') }}</span>
+		<i class="la la-eye"></i> <span>{{ 'Xem' }}</span>
 	</a>
 
 	@else

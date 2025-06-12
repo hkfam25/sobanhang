@@ -19,6 +19,20 @@ class PosController
         return view('index'); // Chúng ta sẽ tạo view này ở bước sau
     }
 
+    protected function setupPublishDefaults()
+    {
+        $this->crud->allowAccess('Quản lý bán hàng');
+
+        // Set operation defaults
+    }
+
+    public function publish()
+    {
+        CRUD::hasAccessOrFail('Quản lý bán hàng');
+        
+        // Custom operation logic
+    }
+
     /**
      * Xử lý yêu cầu tìm kiếm sản phẩm (thường được gọi qua AJAX).
      * Tìm kiếm dựa trên tên sản phẩm, mã vạch (barcode), hoặc SKU.

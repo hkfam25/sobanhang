@@ -29,6 +29,12 @@ class ProductCrudController extends CrudController
         CRUD::setModel(\App\Models\Product::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product');
         CRUD::setEntityNameStrings('product', 'Danh sách sản phẩm');
+
+        if(!backpack_user()->can('Quản lý hàng hóa')){
+	    // deny access to operations
+            CRUD::denyAccess(['list','show','create','update','delete']);
+        }
+
     }
 
     /**
