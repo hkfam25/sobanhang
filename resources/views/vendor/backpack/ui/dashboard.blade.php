@@ -1,7 +1,8 @@
 @extends(backpack_view('blank'))
 
 @php
-    $totalCost = App\Models\Product::sum(\DB::raw('purchase_price * stock_quantity'));
+    // $totalCost = App\Models\Product::sum(\DB::raw('purchase_price * stock_quantity'));
+    $totalCost = App\Models\PurchaseOrder::where('status', 'received')->sum('total_amount');
     $totalRevenue = App\Models\Sale::sum(\DB::raw('total_amount'));
 
     $productCount = App\Models\Product::count();
