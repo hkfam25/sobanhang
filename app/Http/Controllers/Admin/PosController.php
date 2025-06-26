@@ -130,4 +130,11 @@ class PosController
             ], 500); // Internal Server Error
         }
     }
+
+    // // Lịch sử bán hàng
+    // public function salesHistory()
+    // {
+    //     $sales = Sale::with('items.product')->latest()->paginate(15);
+    //     return view('sales_history', compact('sales'));
+    // }
 }

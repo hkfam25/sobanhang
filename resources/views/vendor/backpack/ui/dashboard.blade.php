@@ -89,7 +89,7 @@
         @if($lowStockProducts->isNotEmpty())
             <div class="alert alert-heading alert-warning" role="alert">
                 <h2>Sản phẩm sắp hết hàng!</h2>
-                <h3 >Các sản phẩm dưới đây có số lượng tồn kho bằng mức tồn kho tối thiểu. Vui lòng nhập thêm hàng để tránh hết hàng.</h3>
+                <h3 >Các sản phẩm dưới đây có số lượng tồn kho bằng mức tồn kho tối thiểu hoặc đã hết. Vui lòng nhập thêm hàng để tránh hết hàng.</h3>
                 <hr>
                 <table class="table table-striped">
                     <thead>

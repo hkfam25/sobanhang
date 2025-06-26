@@ -46,12 +46,11 @@ Route::group([
     // Đảm bảo controller và hàm là đúng
     Route::get('product-search-for-po', 'PosController@searchProducts')->name('products.searchForPo');
     
-
-
-    
-
-
-
+    // Routes cho Lịch sử bán hàng
+    Route::resource('sales', SaleController::class)->parameters(['sales' => 'sale'])->only(['index', 'show'])->names([
+        'index' => 'sales.index',
+        'show' => 'sales.show',
+    ]);
     
 }); // this should be the absolute last line of this file
 

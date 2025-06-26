@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Chi Tiết Phiếu Nhập: {{ $purchaseOrder->po_number }}</h1>
         <div>
-            <a href="{{ route('purchase-orders.index') }}" class="btn btn-secondary">Quay Lại Danh Sách</a>
+            <a href="{{ route('purchase-orders.index') }}" class="btn btn-primary">Quay Lại Danh Sách</a>
             {{-- Thêm nút In Phiếu nếu cần --}}
         </div>
     </div>

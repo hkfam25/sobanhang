@@ -6,7 +6,7 @@
     <x-backpack::menu-dropdown-item title="Mặt hàng" :link="backpack_url('product')" />
     <x-backpack::menu-dropdown-item title="Phân loại"  :link="backpack_url('category')" />
     <x-backpack::menu-dropdown-item title="Phiếu nhập hàng"  :link="backpack_url('purchase-orders')"/>
-
+    <x-backpack::menu-dropdown-item title="Lịch sử bán hàng" :link="backpack_url('sales')" />
 </x-backpack::menu-dropdown>
 
 

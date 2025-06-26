@@ -75,10 +75,26 @@ class ProductCrudController extends CrudController
             'attribute' => 'name', // foreign key attribute that is shown to user
             'model' => \App\Models\Category::class, // optional
         ],
-        'purchase_price',
-        'selling_price',
-        'quantity',
-        'description',
+        [
+            'name' => 'purchase_price',
+            'label' => 'Giá nhập',
+            'type' => 'text',
+        ],
+        [
+            'name' => 'selling_price',
+            'label' => 'Giá bán',
+            'type' => 'text',
+        ],
+        [
+            'name' => 'stock_quantity',
+            'label' => 'Số lượng tồn kho',
+            'type' => 'text',
+        ],
+        [
+            'name' => 'description',
+            'label' => 'Mô tả sản phẩm',
+            'type' => 'text',
+        ],
 
 
 
@@ -120,13 +136,13 @@ class ProductCrudController extends CrudController
             'type'      => 'text',
             'name'      => 'sku',
             'attribute' => 'name',
-        ])->validationRules('unique:products,sku|nullable');
+        ])->validationRules('required|unique:products,sku');
 
         CRUD::field([
             'type'      => 'text',
             'name'      => 'barcode',
             'attribute' => 'name',
-        ])->validationRules('unique:products,barcode|nullable');
+        ])->validationRules('required|unique:products,barcode');
         
 
 
@@ -156,6 +172,7 @@ class ProductCrudController extends CrudController
         'label' => 'Hàng tồn kho',
         'type'      => 'number',
         'name'      => 'stock_quantity',
+        'default'=>0,
         'model'     => \App\Models\Products::class,
         'attribute' => 'name',
         ])->validationRules('required|min:1');
@@ -164,6 +181,7 @@ class ProductCrudController extends CrudController
         'label' => 'Giá bán',
         'type'      => 'number',
         'name'      => 'selling_price',
+        'default'=>1000,
         'attribute' => 'name',
         ])->validationRules('required|min:2');
 
